@@ -1,0 +1,168 @@
+/* General body setup to center everything */
+body {
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  background-color: #000; /* Black background */
+  font-family: "Georgia", serif;
+}
+
+/* Main app container setup */
+.app {
+  text-align: center;
+  padding: 20px;
+  background-color: #001f3d; /* Navy blue background */
+  color: #ecf0f1;
+  width: 100%;
+  max-width: 600px; /* Restrict max width */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
+}
+
+/* Main heading */
+.mainHeading {
+  font-size: 1rem; /* Reduced heading size */
+  color: #ecf0f1;
+  margin-bottom: 8px;
+}
+
+/* Subheading style */
+.subHeading h2 {
+  color: #bdc3c7;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Input field setup */
+.input {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input input {
+  width: 100%; /* Full width of container */
+  max-width: 350px; /* Max width for larger screens */
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #7f8c8d;
+  border-radius: 4px;
+  background-color: #34495e; /* Dark grayish-blue for the input field */
+  color: #ecf0f1;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input input:focus {
+  border-color: #ecf0f1;
+  box-shadow: 0 2px 6px rgba(236, 240, 241, 0.5);
+}
+
+.input input::placeholder {
+  color: #95a5a6;
+}
+
+/* Add icon styling */
+.input .fas.fa-plus {
+  margin-left: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #27ae60;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.input .fas.fa-plus:hover {
+  color: #1e8449;
+  transform: scale(1.1);
+}
+
+/* Todo list container */
+.todos {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #7f8c8d;
+  border-radius: 4px;
+  background-color: #34495e; /* Navy blue background for each todo item */
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.todo:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.todo .left {
+  display: flex;
+  align-items: center;
+}
+
+.todo .left input {
+  margin-right: 10px;
+}
+
+.todo .left p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.todo .left p.completed {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+.todo .right .fas.fa-times {
+  color: #e74c3c;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.todo .right .fas.fa-times:hover {
+  color: #c0392b;
+  transform: scale(1.2);
+}
+
+/* Completed task section */
+.completed {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 1rem;
+  color: #ecf0f1;
+}
+
+.completed h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.completed p {
+  margin-left: 15px;
+  color: #bdc3c7;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .input input {
+    width: 80%;
+  }
+
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo .left {
+    margin-bottom: 10px;
+  }
+}
